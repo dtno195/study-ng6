@@ -1,0 +1,18 @@
+<div  id="basicForm">
+  <form #formRef="ngForm" (ngSubmit)="onSubmit(formRef.value)">
+    <input name="username" type="text" [(ngModel)]="username" required #usernameRef='ngModel' minlength="3" class="form-control">
+    <div style="color:red" *ngIf="usernameRef.errors?.required">This field is required</div>
+    <div *ngIf="usernameRef.errors?.minlength">This field is must be longer {{usernameRef.errors?.minlength.requiredLength}}
+      characters . You only type {{usernameRef.errors?.minlength.actualLength}} </div>
+    <br>
+    <div >{{usernameRef.errors | json}}</div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+
+  </form>
+  <div>Form ref</div>
+  {{formRef.value | json}} : đây là value của name
+  <br>
+  {{formRef.valid | json}}
+  
+
+</div>
