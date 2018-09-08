@@ -6,6 +6,10 @@ import { AppComponent } from './app.component';
 import { FormsModule } from '@angular/forms';
 import { BasicFormComponent } from './basic-form/basic-form.component';
 import { ButtonsModule } from 'ngx-bootstrap/buttons';
+// material
+import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
+import {MatButtonModule , MatCheckboxModule } from '@angular/material';
+
 
 @NgModule({
   declarations: [
@@ -17,6 +21,10 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
     AppRoutingModule,
     FormsModule,
     ButtonsModule.forRoot(),
+    BrowserAnimationsModule,
+    NoopAnimationsModule,
+    MatButtonModule,
+    MatCheckboxModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
