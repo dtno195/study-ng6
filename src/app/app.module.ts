@@ -9,12 +9,15 @@ import { ButtonsModule } from 'ngx-bootstrap/buttons';
 // material
 import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform-browser/animations';
 import {MatButtonModule , MatCheckboxModule } from '@angular/material';
+import { BasicComponent } from './basic/basic.component';
+import { MailService } from './mail.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     BasicFormComponent,
+    BasicComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +29,7 @@ import {MatButtonModule , MatCheckboxModule } from '@angular/material';
     MatButtonModule,
     MatCheckboxModule,
   ],
-  providers: [],
+  providers: [MailService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
