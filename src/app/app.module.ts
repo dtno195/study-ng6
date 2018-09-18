@@ -11,6 +11,7 @@ import { BrowserAnimationsModule, NoopAnimationsModule } from '@angular/platform
 import {MatButtonModule , MatCheckboxModule } from '@angular/material';
 import { BasicComponent } from './basic/basic.component';
 import { MailService } from './mail.service';
+import { DynamicFormComponent } from './dynamic-form/dynamic-form.component';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { MailService } from './mail.service';
     AppComponent,
     BasicFormComponent,
     BasicComponent,
+    DynamicFormComponent,
   ],
   imports: [
     BrowserModule,
