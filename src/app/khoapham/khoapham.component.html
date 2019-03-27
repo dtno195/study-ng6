@@ -1,0 +1,24 @@
+<div>
+  <p [hidden]="forgot">Property binding [hiden] = 'forgot'</p>
+  <button mat-raised-button (click)="toggleForgot()">Toggle Forgot</button>
+</div>
+<br>
+<div>Nhập Vào Đây <input type="text" (keyup)="showEvent($event)">
+  <p>On key up event: {{name}}</p>
+</div>
+<div>Two way binding [(ngModel)] = 'name':
+  <input type="text" [(ngModel)]="name" #txtUsername> 
+  <p>{{name}}</p>
+</div>
+<div>
+  <p>Template variable #txtUsername </p>
+  <p>txtUsername.value : {{txtUsername.value | json}}</p>
+</div>
+<div>
+  <p [style.color]="isHighlight()">Style Binding: [style.color] %2 =0 : red ? blue </p>
+  <p>Class binding [class] or [class.nameCss] = 'method or pro'</p>
+  <div [class]='checkClass()'></div>
+</div>
+<div>
+  <p>[ngStyle] : khống nên binding quá nhiều [style] nên ta gộp nó lại thành 1 object r binding = ngStyle</p>
+</div>

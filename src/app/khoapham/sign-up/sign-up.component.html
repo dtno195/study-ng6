@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit();">
+  <br><br>
+  <input type="text" placeholder="Email">
+  <p *ngIf="formSignUp.get('email').invalid && formSignUp.get('email').touched">Email is required</p>
+  <br><br>
+  <input type="password" placeholder="Password">
+  <br><br> 
+    <label for=""><input type="checkbox" ngModel name="nodeJs">node js </label>
+    <label for=""><input type="checkbox" ngModel name="angularJs">angular js </label>
+    <label for=""><input type="checkbox" ngModel name="reactJs">react js </label>
+  <br><br>
+  <button>Submit</button>
+</form>
